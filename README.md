@@ -4,6 +4,7 @@
 ![MIT License](https://img.shields.io/badge/License-MIT-lightgrey.svg?style=for-the-badge)
 ![Version 1.0.0](https://img.shields.io/badge/Version-1.0.0-lightgrey.svg?style=for-the-badge)
 ![Stability Stable](https://img.shields.io/badge/Stability-Stable-lightgrey.svg?style=for-the-badge)
+![Travis CI](https://img.shields.io/travis/null93/lambda.svg?style=for-the-badge&colorB=9f9f9f)
 
 <p align="center" >
 	<img src="docs/images/animation_1.gif" width="33%" />
