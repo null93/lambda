@@ -13,7 +13,7 @@
 </p>
 
 ## About
-This interpreter was written in **Scala** and is build using the **SBT** build system.  It interprets untyped lambda calculus expressions, and shows each intermediate step that is taken to solving the expression.  Alpha transformations and beta reductions are both shown.  For the beta reductions, __Normal-Order Reduction__ (left-most & outer-most) was used to reduce the expression into __Beta-Normal Form__.  In addition, a symbol table is implemented in order to save expression results and be able to use them in future expressions.  For this very reason dynamic symbol resolution was implemented into the interpreter.  The base CFG that was used was as follows:
+This interpreter was written in **Scala** and is built using the **SBT** build system.  It interprets untyped lambda calculus expressions, and shows each intermediate step that is taken to solving the expression.  Alpha transformations and beta reductions are both shown.  For the beta reductions, __Normal-Order Reduction__ (left-most & outer-most) was used to reduce the expression into __Beta-Normal Form__.  In addition, a symbol table is implemented in order to save expression results and be able to use them in future expressions.  For this very reason dynamic symbol resolution was implemented into the interpreter.  The base CFG that was used was as follows:
 
 ```
 EXPRESSION 	:= ( EXPRESSION )
@@ -22,7 +22,7 @@ EXPRESSION 	:= ( EXPRESSION )
                | EXPRESSION EXPRESSION
 ```
 
-Since my I built my parser myself, I rearranged this CFG to be left recursive and left associative for function definitions and right associative for function applications.  It also gave presedence to function application over function definition (function definition is greedy).  That produced the following CFG that was used with my **LL(1)** parser:
+Since I built the parser myself, I rearranged this CFG to be left recursive and left associative for function definitions and right associative for function applications.  It also gave presedence to function application over function definition (function definition is greedy).  That produced the following CFG that was used with my **LL(1)** parser:
 
 ```
 EXPRESSION 	:= ( EXPRESSION ) APPLICATION
